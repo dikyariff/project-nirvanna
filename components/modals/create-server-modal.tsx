@@ -75,10 +75,10 @@ export const CreateServerModal = () => {
         <DialogContent className="bg-white text-black p-0 overflow-hidden">
           <DialogHeader className="pt-8 px-6">
             <DialogTitle className="text-2xl text-center font-bold">
-              Customize Your Server !
+              Customize your server
             </DialogTitle>
             <DialogDescription className="text-center text-zinc-500">
-              Give your server a character by adding a name and an avatar. Feel
+              Give your new server a personality with name and an icon. Feel
               free to customize them at any time.
             </DialogDescription>
           </DialogHeader>
