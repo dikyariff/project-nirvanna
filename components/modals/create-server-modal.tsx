@@ -75,11 +75,11 @@ export const CreateServerModal = () => {
         <DialogContent className="bg-white text-black p-0 overflow-hidden">
           <DialogHeader className="pt-8 px-6">
             <DialogTitle className="text-2xl text-center font-bold">
-              Welcome to Project: Nirvanna 🥰
+              Customize Your Server !
             </DialogTitle>
             <DialogDescription className="text-center text-zinc-500">
-              Welcome aboard! Infuse your server with character by adding a name
-              and an avatar. Feel free to customize them at any time.
+              Give your server a character by adding a name and an avatar. Feel
+              free to customize them at any time.
             </DialogDescription>
           </DialogHeader>
           <Form {...form}>
