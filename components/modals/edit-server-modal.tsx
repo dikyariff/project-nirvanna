@@ -3,6 +3,7 @@
 import * as z from "zod";
 import axios from "axios";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { useModal } from "@/hooks/use-modal-store";
@@ -36,11 +37,12 @@ const formSchema = z.object({
   }),
 });
 
-export const CreateServerModal = () => {
-  const { isOpen, onClose, type } = useModal();
+export const EditServerModal = () => {
+  const { isOpen, onClose, type, data } = useModal();
   const router = useRouter();
 
-  const isModalOpen = isOpen && type === "createServer";
+  const isModalOpen = isOpen && type === "editServer";
+  const { server } = data;
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -50,11 +52,18 @@ export const CreateServerModal = () => {
     },
   });
 
+  useEffect(() => {
+    if (server) {
+      form.setValue("name", server.name);
+      form.setValue("imageUrl", server.imageUrl);
+    }
+  }, [server, form]);
+
   const isLoading = form.formState.isSubmitting;
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      await axios.post("/api/servers", values);
+      await axios.patch(`/api/servers/${server?.id}`, values);
 
       form.reset();
       router.refresh();
@@ -75,11 +84,11 @@ export const CreateServerModal = () => {
         <DialogContent className="bg-white text-black p-0 overflow-hidden">
           <DialogHeader className="pt-8 px-6">
             <DialogTitle className="text-2xl text-center font-bold">
-              Customize your server
+              Welcome to Project: Nirvanna 🥰
             </DialogTitle>
             <DialogDescription className="text-center text-zinc-500">
-              Give your new server a personality with name and an icon. Feel
-              free to customize them at any time.
+              Welcome aboard! Infuse your server with character by adding a name
+              and an avatar. Feel free to customize them at any time.
             </DialogDescription>
           </DialogHeader>
           <Form {...form}>
@@ -126,7 +135,7 @@ export const CreateServerModal = () => {
               </div>
               <DialogFooter className="bg-gray-100 px-6 py-4">
                 <Button variant={"primary"} disabled={isLoading}>
-                  Create
+                  Save
                 </Button>
               </DialogFooter>
             </form>
