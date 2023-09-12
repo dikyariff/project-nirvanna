@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useModal } from "@/hooks/use-modal-store";
 import { MemberRole } from "@prisma/client";
-import { serverWithMemberWithProfiles } from "@/types";
+import { ServerWithMemberWithProfiles } from "@/types";
 
 import {
   Check,
@@ -53,7 +53,7 @@ export const MembersModal = () => {
   const [loadingId, setLoadingId] = useState("");
 
   const isModalOpen = isOpen && type === "members";
-  const { server } = data as { server: serverWithMemberWithProfiles };
+  const { server } = data as { server: ServerWithMemberWithProfiles };
 
   const onKick = async (memberId: string) => {
     try {

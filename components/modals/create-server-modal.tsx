@@ -116,6 +116,7 @@ export const CreateServerModal = () => {
                           disabled={isLoading}
                           className="bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
                           placeholder="Enter server name"
+                          autoComplete="off"
                           {...field}
                         />
                       </FormControl>
