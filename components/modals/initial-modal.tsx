@@ -80,8 +80,8 @@ export const InitialModal = () => {
               Welcome to Project: Nirvanna 🥰
             </DialogTitle>
             <DialogDescription className="text-center text-zinc-500">
-              Looks familiar? Let's start by creating a new server! Give your
-              new server a personality with name and an icon. Feel free to
+              Looks familiar? Let&apos;s start by creating a new server! Give
+              your new server a personality with name and an icon. Feel free to
               customize them at any time.
             </DialogDescription>
           </DialogHeader>
