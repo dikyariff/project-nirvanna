@@ -11,6 +11,6 @@ Project: Nirvanna is an open-source Discord clone that aims to provide a feature
 - **Privacy First:** We prioritize user privacy and data protection.
 
 ## Getting Started
-To start using Project: Nirvanna, please click this link [Project: Nirvanna](project-nirvanna-production.up.railway.app).
+To start using Project: Nirvanna, please click this link [Project: Nirvanna](https://project-nirvanna-production.up.railway.app/).
 
 We're excited to have you join us in shaping the future of online communication with Project: Nirvanna!
