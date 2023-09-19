@@ -9,8 +9,3 @@ Project: Nirvanna is an open-source Discord clone that aims to provide a feature
 - **Robust Permissions:** Customize roles and permissions for server management.
 - **Emojis and Reactions:** Express yourself with a variety of emojis and reactions.
 - **Privacy First:** We prioritize user privacy and data protection.
-
-## Getting Started
-To start using Project: Nirvanna, please click this link [Project: Nirvanna](https://project-nirvanna-production.up.railway.app/).
-
-We're excited to have you join us in shaping the future of online communication with Project: Nirvanna!
